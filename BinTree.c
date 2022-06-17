@@ -1,10 +1,10 @@
 #include "Bintree.h"
 
 #define MARKER -1
-node_t* tree_c(int key) {
+node_tr* tree_c(int key) {
 
-	node_t* node;
-	node = (node_t*)malloc(sizeof(node_t));
+	node_tr* node;
+	node = (node_tr*)malloc(sizeof(node_t));
 
 	if (node == NULL) {
 		return NULL;
@@ -17,7 +17,7 @@ node_t* tree_c(int key) {
 };
 
 
-node_t* tree_s(node_t* root, int key) {
+node_tr* tree_s(node_tr* root, int key) {
 
 	if (root == NULL) {
 		return NULL;
@@ -36,7 +36,7 @@ node_t* tree_s(node_t* root, int key) {
 };
 
 
-node_t* tree_a(node_t* root, int key) {
+node_tr* tree_a(node_tr* root, int key) {
 
 
 	if (root == NULL) {
@@ -67,7 +67,7 @@ node_t* tree_a(node_t* root, int key) {
 	return NULL;
 };
 
-void serialize(node_t* root, FILE* fp) {
+void serialize(node_tr* root, FILE* fp) {
 	if (fp == NULL) {
 		printf("Could not open file");
 		return;
@@ -83,7 +83,7 @@ void serialize(node_t* root, FILE* fp) {
 	serialize(root->right, fp);
 };
 
-node_t* deserialize(node_t* root, FILE* fp) {
+node_tr* deserialize(node_tr* root, FILE* fp) {
 	
 	int key;
 	if (!fscanf(fp, "%d ", &key) || key == MARKER) {
