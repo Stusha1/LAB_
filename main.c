@@ -13,7 +13,7 @@ int test(char* name, char type) {
 		return 2;
 	}
 
-	tree_add(x, 20);
+	tree_a(x, 20);
 	if (NULL == tree_s(x, 20)) {
 		return 3;
 	}
