@@ -28,10 +28,10 @@ node_t* tree_s(node_t* root, int key) {
 		return root;
 	}
 	if (key < root->key) {
-		return tree_search(root->left, key);
+		return tree_s(root->left, key);
 	}
 	else {
-		return tree_search(root->right, key);
+		return tree_s(root->right, key);
 	}
 };
 
@@ -46,21 +46,21 @@ node_t* tree_a(node_t* root, int key) {
 	if (key < root->key) {	
 	
 		if (root->left == NULL) {
-			return root->left = tree_create(key);
+			return root->left = tree_c(key);
 		}
 
 		else {
-			return tree_add(root->left, key);
+			return tree_a(root->left, key);
 		}
 	}
 	else {
 
 		if (root->right == NULL) {
-			return root->right = tree_create(key);
+			return root->right = tree_c(key);
 		}
 
 		else {
-			return tree_add(root->right, key);
+			return tree_a(root->right, key);
 		}
 	}
 
@@ -90,7 +90,7 @@ node_t* deserialize(node_t* root, FILE* fp) {
 		return NULL;
 	}
 
-	root = tree_create(key);
+	root = tree_c(key);
 	root->left = deserialize(root->left, fp);
 	root->right = deserialize(root->right, fp);
 
