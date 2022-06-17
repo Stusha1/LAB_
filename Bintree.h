@@ -14,13 +14,13 @@ typedef struct node {
 
 
 
-node_t* tree_create(int);
+node_t* tree_c(int);
 
 
-node_t* tree_search(node_t*, int);
+node_t* tree_s(node_t*, int);
 
 
-node_t* tree_add(node_t*, int);
+node_t* tree_a(node_t*, int);
 
 
 void serialize(node_t*, FILE*);
