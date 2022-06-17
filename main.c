@@ -4,17 +4,17 @@
 int test(char* name, char type) {
 
 	node_t* x = NULL;
-	if (NULL != tree_search(x, 2)) {
+	if (NULL != tree_s(x, 2)) {
 		return 1;
 	}
-	x = tree_create(2);
+	x = tree_c(2);
 
-	if (NULL == tree_search(x, 2)) {
+	if (NULL == tree_s(x, 2)) {
 		return 2;
 	}
 
 	tree_add(x, 20);
-	if (NULL == tree_search(x, 20)) {
+	if (NULL == tree_s(x, 20)) {
 		return 3;
 	}
 	
