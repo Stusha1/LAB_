@@ -1,7 +1,7 @@
 #include "Bintree.h"
 
 #define MARKER -1
-node_t* tree_create(int key) {
+node_t* tree_c(int key) {
 
 	node_t* node;
 	node = (node_t*)malloc(sizeof(node_t));
@@ -17,7 +17,7 @@ node_t* tree_create(int key) {
 };
 
 
-node_t* tree_search(node_t* root, int key) {
+node_t* tree_s(node_t* root, int key) {
 
 	if (root == NULL) {
 		return NULL;
@@ -36,7 +36,7 @@ node_t* tree_search(node_t* root, int key) {
 };
 
 
-node_t* tree_add(node_t* root, int key) {
+node_t* tree_a(node_t* root, int key) {
 
 
 	if (root == NULL) {
