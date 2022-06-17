@@ -3,7 +3,7 @@
 
 int test(char* name, char type) {
 
-	node_t* x = NULL;
+	node_tr* x = NULL;
 	if (NULL != tree_s(x, 2)) {
 		return 1;
 	}
@@ -28,7 +28,7 @@ int test(char* name, char type) {
 	}
 	
 	if (type == 'r') {
-		node_t* y = NULL;
+		node_tr* y = NULL;
 		FILE* fn = fopen(name, type);
 		if (fn == NULL) {
 			return 5;
