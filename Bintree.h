@@ -10,19 +10,19 @@ typedef struct node {
 	struct node* left;
 	struct node* right;
 
-} node_t;
+} node_tr;
 
 
 
-node_t* tree_c(int);
+node_tr* tree_c(int);
 
 
-node_t* tree_s(node_t*, int);
+node_tr* tree_s(node_tr*, int);
 
 
-node_t* tree_a(node_t*, int);
+node_tr* tree_a(node_tr*, int);
 
 
-void serialize(node_t*, FILE*);
-node_t* deserialize(node_t*, FILE*);
+void serialize(node_tr*, FILE*);
+node_tr* deserialize(node_tr*, FILE*);
 #endif // __TREE__
